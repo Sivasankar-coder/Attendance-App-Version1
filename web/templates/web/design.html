@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{% block title %}{% endblock %}</title>
+      {% load static %}
+
+    <!-- Bootstrap core CSS-->
+    <link href="{% static '/web/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom fonts for this template-->
+    <link href="{% static '/web/css/all.min.css' %}" rel="stylesheet" type="text/css">
+
+    <!-- Page level plugin CSS-->
+    <link href="{% static '/web/css/dataTables.bootstrap4.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="{% static '/web/css/sb-admin.css' %}" rel="stylesheet">
+
+    <!-- Latest compiled and minified CSS -->
+
+
+      {% block css %}
+      {% endblock %}
+
+  </head>
+
+  <body><center>
+
+<div class="col-md-3"></div>
+ <div class="col-md-6 well" style="background-color: aqua">
+    <div id="wrapper">
+      <div id="content-wrapper">
+        <div class="container-fluid">
+
+          <!-- Page Content -->
+            {% block content %}
+            {% endblock %}
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="{% static '/web/css/jquery.min.js' %}"></script>
+    <script src="{% static '/web/css/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{% static '/web/css/jquery.easing.min.js' %}"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="{% static '/web/css/sb-admin.min.js' %}"></script>
+
+   {% block scripts %}
+    {% endblock %}
+ </div>
+  </center>
+  </body>
+
+</html>

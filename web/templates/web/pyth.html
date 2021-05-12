@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="button" id='script' name="scriptbutton" value=" Run Script " onclick="goPython()">
+
+    <script src="templates"></script>
+
+    <script>
+        function goPython(){
+            $.ajax({
+              url: "siva.py",
+             context: document.body
+            }).done(function() {
+             alert('finished python script');;
+            });
+        }
+    </script>
+
+</body>
+</html>

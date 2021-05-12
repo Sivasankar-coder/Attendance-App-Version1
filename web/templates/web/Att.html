@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    {% load static %}
+    {% csrf_token %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"></script>
+      <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"/>
+
+      <link rel="stylesheet" type="text/css" href="{% static 'web/css/bootstrap.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'web/css/style.css' %}" />
+      <style>
+          table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 20px;
+}
+table#alter tr:nth-child(even) {
+    background-color: #eee;
+}
+table#alter tr:nth-child(odd) {
+    background-color: #fff;
+}
+table#alter th {
+    color: white;
+    background-color: gray;
+}
+table, th, td {
+  border: 1px solid black;
+}
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+table {
+  width: 90%;
+}
+table {
+    vertical-align: middle;
+}
+</style>
+
+  </head>
+
+<body>
+
+<nav class="bg-info">
+        <div class="container-fluid">
+            <div class="navbar-brand">
+            <p>Attendance Details</p>
+            </div>
+            </div>
+    </nav>
+
+<br><br><br>
+
+
+<table class="center">
+<tr><th>Course</th><th>Class</th><th>Attendance</th></tr>
+<tr><td>Java</td><td>Array</td>
+    <td>
+        <form method="POST" action="{% url 'enter3' %}">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <input type="hidden" id="resumeid" name="resumeid" value="{{member.resumeid}}">
+            <button name="sub" type="submit" class="btn btn-primary form-control">Mark Attendance</button>
+            </div>
+        </form>
+    </td></tr>
+
+</table>
+
+</body>

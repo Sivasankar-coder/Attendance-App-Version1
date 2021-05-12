@@ -1,0 +1,38 @@
+{% extends 'web/base.html' %}
+{% block body %}
+  <body>
+
+    <table border="1" style="width:800px">
+      <thead>
+      <tr>
+          <th>ResumeID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Otp</th>
+          <th>Attend</th>
+      </tr>
+      </thead>
+        <tbody>
+           {% for s in member %}
+           <tr>
+               <td>
+                   {{s.resumeid}}
+               </td>
+               <td>
+                   {{s.name}}
+               </td>
+               <td>
+                   {{s.email}}
+               </td>
+               <td>
+                   {{s.otp}}
+               </td>
+               <td>
+                   {{s.Attend}}
+               </td>
+           </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+  </body>
+{% endblock %}
